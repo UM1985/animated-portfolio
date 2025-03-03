@@ -4,4 +4,12 @@ var typed = new Typed (".text ",
     backSpeed:100,
     backDelay:1000,
     loop:true
-})
+});
+
+let icon = document.querySelector(".icon");
+let navLinks = document.querySelector(".nav-links");
+
+icon.addEventListener("click", () => {
+    navLinks.classList.toggle("showData");
+});
+

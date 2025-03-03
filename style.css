@@ -4,12 +4,14 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "poppins", sans-serif;
+  
 }
 
 body {
   color: #ededed;
   background: #081b29;
 }
+
 
 .header {
   position: fixed;
@@ -25,49 +27,73 @@ body {
 }
 
 .logo {
-  position: relative;
   font-size: 25px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  cursor: default;
   opacity: 0;
   animation: slideRight 1s ease forwards;
 }
 
-.navbar a {
-  display: inline-block;
-  font-size: 25px;
+.navbar {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 35px;
+}
+.nav-links li {
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.nav-links a {
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 35px;
   transition: 0.3s;
   opacity: 0;
   animation: slideTop 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #0ef;
 }
+
+/* Hide menu icon by default */
+.icon {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 .home {
   position: relative;
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background: url(./photos/Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png)
-    no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* background: url(./photos/Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png) */
+  /* background-position: center; */
+  /* background-size: cover; */
   display: flex;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 70px 7% 0;
 }
 
 .home-content {
   max-width: 600px;
+  width: 60%;
 }
 
 .home-content h3 {
@@ -153,7 +179,7 @@ body {
   border-radius: 50%;
   object-fit: contain;
   object-position: center;
-  /* margin-bottom: 150px; */
+  margin-bottom: 150px;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 1s;
@@ -756,4 +782,86 @@ margin-top: 70px;
     transform: translateY(0px);
     opacity: 1;
   }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .icon {
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: #051129;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.nav-links.showData {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+   .home{
+    margin-top: 50px;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    padding: 70px 8% 0;
+   
+   }
+
+   .home-content{
+    align-items: center;
+    width: 600px;
+   }
+}
+
+@media(max-width: 425px){
+
+  .home{
+    margin-top: 50px;
+    padding: 70px 5% 0;
+   }
+
+  .home-content{
+    align-items: center;
+    width: 375px;
+   }
+
+   .home-content h3 {
+    font-size: 28px;
+  }
+  
+  .home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+   
+  }
+ 
+  .home-content h1 {
+    font-size: 40px;
+  }
+  
+  .home-content p {
+    font-size: 16px;
+  }
+  .image {
+    width: 300px;
+    height: 300px;
+
+  }
+
 }
