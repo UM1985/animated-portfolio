@@ -189,6 +189,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  padding: 70px 7% 0;
 }
 
 .about-img img {
@@ -947,8 +948,33 @@ form textarea {
   }
 
   .responsive h2 {
+    margin-top: 50px;
     font-size: 50px;
   }
+
+  .about-text p {
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.about-img img {
+  /* padding-bottom: 20%; */
+  /* max-width: 630px; */
+  margin-top: 0px;
+  height: 300px;
+  width: 300px;
+}
+
+.container{
+  padding : 40px;
+}
+.sub-title {
+  text-align: center;
+  font-size: 44px;
+  padding-bottom: 6px;
+}
 }
 
 @media (max-width: 375px) {
