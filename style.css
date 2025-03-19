@@ -936,6 +936,9 @@ form textarea {
 }
 
 @media (max-width: 425px) {
+
+ 
+ 
   .home {
     margin-top: 50px;
     padding: 70px 5% 0;
@@ -978,6 +981,7 @@ form textarea {
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 4rem;
+    text-align: start;
 }
 
 .about-img img {
@@ -999,7 +1003,7 @@ form textarea {
 
 .container1 {
   width: 400px;
-  height: 560px;
+  height: 530px;
   /* padding: 75px 90px; */
   margin-left: 20px;
 }
@@ -1014,6 +1018,17 @@ form textarea {
   animation: animate 1s ease-in-out forwards;
   transform: scaleX(0);
   transform-origin: left;
+}
+
+.main-text h2 {
+  margin-top: 30px;
+  font-size: 35px;
+  line-height: 1;
+  text-align: center;
+}
+#portfolio{
+  padding: 30px;
+  width: 420px;
 }
 
 }
@@ -1089,6 +1104,16 @@ form textarea {
 .home-content h3 {
   width: 314px;
   font-size: 20px;
+}
+.main-text h2 {
+  margin-top: 30px;
+  font-size: 35px;
+  line-height: 1;
+  text-align: center;
+}
+#portfolio{
+  width: 325px;
+  padding: 30px;
 }
 
 }
