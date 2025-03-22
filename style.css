@@ -304,52 +304,66 @@ section {
   display: flex;
   flex-wrap: nowrap;
 }
+section {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
 .container1 {
-  width: 600px;
-  height: 650px;
-  padding: 75px 90px;
-  margin-left: 20px;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 37.5rem; /* 600px in rem */
+  height: auto; /* Allow height to adjust based on content */
+  padding: 4.6875rem 5.625rem; /* 75px 90px in rem */
+  margin-left: 1.25rem; /* 20px in rem */
 }
 
 .heading1 {
   text-align: center;
   text-decoration: underline;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 5px;
-  margin-bottom: 50px;
+  text-underline-offset: 0.625rem; /* 10px in rem */
+  text-decoration-thickness: 0.3125rem; /* 5px in rem */
+  margin-bottom: 3.125rem; /* 50px in rem */
 }
+
 .bar {
-  font-size: 23px;
+  font-size: 1.4375rem; /* 23px in rem */
 }
+
 .Technical-bars .bar {
-  margin: 40px 0;
+  margin: 2.5rem 0; /* 40px in rem */
 }
+
 .Technical-bars .bar:first-child {
   margin-top: 0;
 }
+
 .Technical-bars .bar:last-child {
   margin-bottom: 0;
 }
+
 .Technical-bars .bar .info {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; /* 5px in rem */
 }
+
 .Technical-bars .bar .info span {
-  font-size: 17px;
+  font-size: 1.0625rem; /* 17px in rem */
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
+
 .Technical-bars .bar .progress-line {
   position: relative;
-  align-self:center;
-  border-radius: 10px;
+  align-self: center;
+  border-radius: 0.625rem; /* 10px in rem */
   width: 100%;
-  height: 5px;
+  height: 0.3125rem; /* 5px in rem */
   background-color: #000000;
   animation: animate 1s ease-in-out forwards;
   transform: scaleX(0);
   transform-origin: left;
 }
+
 @keyframes animate {
   100% {
     transform: scaleX(1);
@@ -360,7 +374,7 @@ section {
   height: 100%;
   background-color: #0ef;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 0.625rem; /* 10px in rem */
   animation: animate 1s 1s ease-in-out forwards;
   transform: scaleX(0);
   transform-origin: left;
@@ -369,56 +383,66 @@ section {
 .progress-line.html span {
   width: 90%;
 }
+
 .progress-line.css span {
   width: 85%;
 }
+
 .progress-line.javascript span {
   width: 0%;
 }
+
 .progress-line.Python span {
   width: 0%;
 }
+
 .progress-line.react span {
   width: 0%;
 }
 
 .progress-line span::after {
   position: absolute;
-  padding: 1px 8px;
+  padding: 0.0625rem 0.5rem; /* 1px 8px in rem */
   background-color: #000;
   color: #fff;
-  font-size: 12px;
-  border-radius: 3px;
-  top: -28px;
-  right: -20px;
+  font-size: 0.75rem; /* 12px in rem */
+  border-radius: 0.1875rem; /* 3px in rem */
+  top: -1.75rem; /* -28px in rem */
+  right: -1.25rem; /* -20px in rem */
   animation: showText 0.5s 1.5s linear forwards;
   opacity: 0;
 }
+
 .progress-line.html span::after {
   content: "90%";
 }
+
 .progress-line.css span::after {
   content: "85%";
 }
+
 .progress-line.javascript span::after {
   content: "0%";
 }
+
 .progress-line.Python span::after {
   content: "0%";
 }
+
 .progress-line.react span::after {
   content: "0%";
 }
+
 .progress-line span::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
+  border: 0.4375rem solid transparent; /* 7px in rem */
+  border-bottom-width: 0;
+  border-right-width: 0;
   border-top-color: #000;
-  top: -10px;
+  top: -0.625rem; /* -10px in rem */
   right: 0;
   animation: showText 0.5s 1.5s linear forwards;
   opacity: 0;
@@ -437,10 +461,11 @@ section {
   justify-content: space-evenly;
   align-items: flex-start;
 }
+
 .radial-bars .radial-bar {
   width: 50%;
-  height: 170px;
-  margin-bottom: 10px;
+  height: 10.625rem; /* 170px in rem */
+  margin-bottom: 0.625rem; /* 10px in rem */
   position: relative;
 }
 
@@ -449,9 +474,10 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
-  width: 120px;
-  height: 160px;
+  width: 7.5rem; /* 120px in rem */
+  height: 10rem; /* 160px in rem */
 }
+
 .radial-bars .radial-bar .progress-bar {
   stroke-width: 10;
   stroke: black;
@@ -461,6 +487,7 @@ section {
   stroke-linecap: round;
   animation: animate-bar 1s linear forwards;
 }
+
 @keyframes animate-bar {
   100% {
     stroke-dashoffset: -1;
@@ -475,15 +502,19 @@ section {
   stroke-dashoffset: 502;
   stroke-linecap: round;
 }
+
 .path-1 {
   animation: animate-path1 1s 1s linear forwards;
 }
+
 .path-2 {
   animation: animate-path2 1s 1s linear forwards;
 }
+
 .path-3 {
   animation: animate-path3 1s 1s linear forwards;
 }
+
 .path-4 {
   animation: animate-path4 1s 1s linear forwards;
 }
@@ -493,16 +524,19 @@ section {
     stroke-dashoffset: 50;
   }
 }
+
 @keyframes animate-path2 {
   100% {
     stroke-dashoffset: 175;
   }
 }
+
 @keyframes animate-path3 {
   100% {
     stroke-dashoffset: 125;
   }
 }
+
 @keyframes animate-path4 {
   100% {
     stroke-dashoffset: 75;
@@ -514,23 +548,25 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 17px;
+  font-size: 1.0625rem; /* 17px in rem */
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
+
 .radial-bar .text {
   width: 100%;
   position: absolute;
   text-align: center;
   left: 50%;
-  bottom: -5px;
+  bottom: -0.3125rem; /* -5px in rem */
   transform: translate(-50px);
-  font-size: 17px;
+  font-size: 1.0625rem; /* 17px in rem */
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
+
 
 
 #portfolio{
@@ -573,45 +609,49 @@ section {
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
   position: absolute;
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px in rem */
   left: 0;
-  bottom: -30px;
+  bottom: -1.875rem; /* -30px in rem */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 2.5rem; /* 40px in rem */
   transition: height 0.5s;
 }
 
 .layer h5 {
   color: #000;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px in rem */
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px in rem */
 }
+
 .layer p {
   color: #000;
   font-size: 1rem;
   line-height: 1.8;
 }
+
 .layer i {
   color: #ff004f;
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 1.25rem; /* 20px in rem */
+  font-size: 1.25rem; /* 20px in rem */
   background: #fff;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem; /* 60px in rem */
+  height: 3.75rem; /* 60px in rem */
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
+
 .row:hover img {
   transform: scale(1.1);
 }
+
 .row:hover .layer {
   height: 100%;
 }
@@ -802,6 +842,38 @@ section {
 
 /* Responsive Media Queries */
 @media (max-width: 1200px) {
+
+  .container1 {
+    padding: 3.75rem 4.5rem; /* Reduce padding */
+  }
+
+  .heading1 {
+    font-size: 2.5rem; /* Reduce font size */
+    margin-bottom: 2.5rem; /* Reduce margin */
+  }
+
+  .bar {
+    font-size: 1.25rem; /* Reduce font size */
+  }
+
+  .Technical-bars .bar {
+    margin: 2rem 0; /* Reduce margin */
+  }
+
+  .Technical-bars .bar .info span {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  .radial-bars .radial-bar {
+    height: 9rem; /* Reduce height */
+  }
+
+  .radial-bars .radial-bar svg {
+    width: 6rem; /* Reduce width */
+    height: 8rem; /* Reduce height */
+  }
+
+
   .contact {
     gap: 2rem; /* Reduce gap for smaller screens */
     padding: 0 20px; /* Adjust padding */
@@ -821,6 +893,38 @@ section {
 }
 
 @media (max-width: 992px) {
+
+  .container1 {
+    padding: 3rem 3.75rem; /* Further reduce padding */
+  }
+
+  .heading1 {
+    font-size: 2rem; /* Further reduce font size */
+    margin-bottom: 2rem; /* Further reduce margin */
+  }
+
+  .bar {
+    font-size: 1.125rem; /* Further reduce font size */
+  }
+
+  .Technical-bars .bar {
+    margin: 1.5rem 0; /* Further reduce margin */
+  }
+
+  .Technical-bars .bar .info span {
+    font-size: 0.9375rem; /* Further reduce font size */
+  }
+
+  .radial-bars .radial-bar {
+    height: 7.5rem; /* Further reduce height */
+  }
+
+  .radial-bars .radial-bar svg {
+    width: 5rem; /* Further reduce width */
+    height: 6.5rem; /* Further reduce height */
+  }
+
+
   .contact {
     grid-template-columns: 1fr; /* Stack columns on smaller screens */
     text-align: center; /* Center-align content */
@@ -955,9 +1059,34 @@ section {
 
   }
   
-  .container1{
-    height: 640px;
-    padding: 11px 36px;
+  .container1 {
+    padding: 2.5rem 3rem; /* Minimal padding for mobile */
+  }
+
+  .heading1 {
+    font-size: 1.75rem; /* Smallest font size */
+    margin-bottom: 1.5rem; /* Smallest margin */
+  }
+
+  .bar {
+    font-size: 1rem; /* Smallest font size */
+  }
+
+  .Technical-bars .bar {
+    margin: 1rem 0; /* Smallest margin */
+  }
+
+  .Technical-bars .bar .info span {
+    font-size: 0.875rem; /* Smallest font size */
+  }
+
+  .radial-bars .radial-bar {
+    height: 6rem; /* Smallest height */
+  }
+
+  .radial-bars .radial-bar svg {
+    width: 4rem; /* Smallest width */
+    height: 5rem; /* Smallest height */
   }
 
   .contact {
@@ -1090,22 +1219,33 @@ section {
 }
 
 .container1 {
-  width: 400px;
-  height: 530px;
-  /* padding: 75px 90px; */
-  margin-left: 20px;
+  padding: 2rem 2.5rem; /* Minimal padding for very small screens */
 }
 
-.Technical-bars .bar .progress-line {
-  position: relative;
-  align-self:center;
-  border-radius: 10px;
-  width: 70%;
-  height: 5px;
-  background-color: #000000;
-  animation: animate 1s ease-in-out forwards;
-  transform: scaleX(0);
-  transform-origin: left;
+.heading1 {
+  font-size: 1.5rem; /* Smallest font size */
+  margin-bottom: 1rem; /* Smallest margin */
+}
+
+.bar {
+  font-size: 0.875rem; /* Smallest font size */
+}
+
+.Technical-bars .bar {
+  margin: 0.75rem 0; /* Smallest margin */
+}
+
+.Technical-bars .bar .info span {
+  font-size: 0.75rem; /* Smallest font size */
+}
+
+.radial-bars .radial-bar {
+  height: 5rem; /* Smallest height */
+}
+
+.radial-bars .radial-bar svg {
+  width: 3rem; /* Smallest width */
+  height: 4rem; /* Smallest height */
 }
 
 .main-text h2 {
